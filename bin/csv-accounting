@@ -1,0 +1,25 @@
+#!/usr/bin/perl
+
+use Log::Accounting::CSV;
+use Getopt::Std;
+use YAML;
+
+my %opts;
+getopts('fr', \%opts);
+
+my $file = shift || die "You'll have to give me a .csv filename\n";
+
+my $obj  = new Log::Accounting::CSV(
+    file => $file,
+    first_line_are_fields => 1
+    );
+
+$obj->process;
+
+$obj->report;
+
+my $dumppath = shift;
+if($dumppath) {
+  YAML::DumpFile($dumppath,$obj->result);
+}
+

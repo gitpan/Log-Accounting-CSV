@@ -1,3 +1,4 @@
+bin/csv-accounting
 inc/Module/Install.pm
 inc/Module/Install/Base.pm
 inc/Module/Install/Can.pm
@@ -11,6 +12,9 @@ Makefile.PL
 MANIFEST			This list of files
 META.yml
 t/00.use.t
+t/ffields.t
 t/log.csv
+t/log.first.line.are.fields.csv
+t/only_fields.t
 t/simple.t
 t/synopsis.t

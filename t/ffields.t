@@ -3,8 +3,9 @@
 use Test::More tests => 1;
 use Log::Accounting::CSV;
 
-my $obj  = new Log::Accounting::CSV(file => 't/log.csv',
-    fields=>[qw/id author path date/]);
+my $obj  = new Log::Accounting::CSV(
+    file => 't/log.first.line.are.fields.csv',
+    first_line_are_fields => 1);
 
 $obj->process;
 

@@ -1,5 +1,5 @@
 name: Log-Accounting-CSV
-version: 0.01
+version: 0.02
 abstract: Accounting CSV format Data
 author: Kang-min Liu <gugod@gugod.org>
 license: perl
